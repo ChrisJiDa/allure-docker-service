@@ -2,7 +2,7 @@
 from logging.config import dictConfig
 from functools import wraps
 from subprocess import call
-from datetime import datetime
+import datetime
 import base64
 import datetime
 import glob
@@ -864,7 +864,7 @@ def latest_report_time_endpoint():
         with open('projects/{}/reports/latest/data/behaviors.json'.format(project_id)) as f:
             json_content = json.load(f)
         timestamp = int(str(json_content['children'][0]['children'][0]['children'][0]['time']['start'])[0:10])
-        start_time = datetime.fromtimestamp(timestamp)
+        start_time = datetime.datetime.fromtimestamp(timestamp)
 
 
 

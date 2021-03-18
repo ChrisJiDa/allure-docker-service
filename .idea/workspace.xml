@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e890552-7be5-44ef-9792-26c1cfecf410" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/allure-docker-api/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/allure-docker-api/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-custom/Dockerfile" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/allure-docker-api/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="852" column="8" lean-forward="true" selection-start-line="852" selection-start-column="8" selection-end-line="852" selection-end-column="8" />
+            <state relative-caret-position="282">
+              <caret line="860" column="32" lean-forward="true" selection-start-line="860" selection-start-column="32" selection-end-line="860" selection-end-column="32" />
               <folding>
                 <element signature="e#32#69#0" expanded="true" />
               </folding>
@@ -130,8 +129,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1848" />
-    <option name="y" value="118" />
+    <option name="x" value="52" />
+    <option name="y" value="54" />
     <option name="width" value="1936" />
     <option name="height" value="1046" />
   </component>
@@ -265,15 +264,15 @@
       <workItem from="1612933786261" duration="5722000" />
       <workItem from="1613709344114" duration="1742000" />
       <workItem from="1614211022628" duration="13789000" />
-      <workItem from="1615521284833" duration="19756000" />
+      <workItem from="1615521284833" duration="20918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41009000" />
+    <option name="totallyTimeSpent" value="42171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
@@ -505,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allure-docker-api/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="852" column="8" lean-forward="true" selection-start-line="852" selection-start-column="8" selection-end-line="852" selection-end-column="8" />
+        <state relative-caret-position="282">
+          <caret line="860" column="32" lean-forward="true" selection-start-line="860" selection-start-column="32" selection-end-line="860" selection-end-column="32" />
           <folding>
             <element signature="e#32#69#0" expanded="true" />
           </folding>
