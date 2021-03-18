@@ -2,6 +2,7 @@
 from logging.config import dictConfig
 from functools import wraps
 from subprocess import call
+from datetime import datetime
 import base64
 import datetime
 import glob
@@ -844,6 +845,50 @@ def latest_report_endpoint():
         resp = jsonify(body)
         resp.status_code = 400
         return resp
+
+@app.route("/latest-report-time", strict_slashes=False)
+@app.route("/allure-docker-service/latest-report-time", strict_slashes=False)
+@jwt_required
+def latest_report_endpoint():
+    try:
+        project_id = resolve_project(request.args.get('project_id'))
+        if is_existent_project(project_id) is False:
+            body = {
+                'meta_data': {
+                    'message' : "project_id '{}' not found".format(project_id)
+                }
+            }
+            resp = jsonify(body)
+            resp.status_code = 404
+            return resp
+        with open('projects/{}/reports/latest/data/behaviors.json'.format(project_id)) as f:
+            json_content = json.load(f)
+        timestamp = int(str(json_content['children'][0]['children'][0]['children'][0]['time']['start'])[0:10])
+        start_time = datetime.fromtimestamp(timestamp)
+
+
+
+
+    except Exception as ex:
+        body = {
+            'meta_data': {
+                'message' : str(ex)
+            }
+        }
+        resp = jsonify(body)
+        resp.status_code = 400
+        return resp
+    else:
+        body = {
+            'meta_data': {
+                'latest_report_start_time': start_time
+            }
+        }
+
+        resp = jsonify(body)
+        resp.status_code = 200
+
+    return resp
 
 @app.route("/send-results", methods=['POST'], strict_slashes=False)
 @app.route("/allure-docker-service/send-results", methods=['POST'], strict_slashes=False)
