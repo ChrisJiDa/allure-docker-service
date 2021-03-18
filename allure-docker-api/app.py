@@ -849,7 +849,7 @@ def latest_report_endpoint():
 @app.route("/latest-report-time", strict_slashes=False)
 @app.route("/allure-docker-service/latest-report-time", strict_slashes=False)
 @jwt_required
-def latest_report_endpoint():
+def latest_report_time_endpoint():
     try:
         project_id = resolve_project(request.args.get('project_id'))
         if is_existent_project(project_id) is False:
